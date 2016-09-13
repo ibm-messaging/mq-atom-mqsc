@@ -1,6 +1,6 @@
 {
-  "name": "MQSC-syntax",
-  "version": "0.2.0",
+  "name": "language-ibm-mqsc",
+  "version": "0.0.0",
   "description": "IBM MQ MQSC syntax highlighting support for the Atom editor",
   "repository": {
     "type": "git",
