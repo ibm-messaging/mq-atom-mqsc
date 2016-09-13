@@ -11,12 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# IBM MQ MQSC syntax highlighting support for the Atom editor.
-
-Adds syntax highlighting for IBM MQ MQSC command files to Atom.
-
-There are two files included in this package for testing changes made to the
-syntax highlighting system.
- - `example.mqsc` = This file simply shows an example valid MQSC file
- - `TEST.mqsc` = This file is a more indepth test and includes valid and invalid syntax
+'.source.mqsc':
+  'editor':
+    'commentStart': '*'
+    'increaseIndentPattern': '^.*\\+$'

@@ -1,0 +1,19 @@
+{
+  "name": "MQSC-syntax",
+  "version": "0.0.0",
+  "description": "IBM MQ MQSC syntax highlighting support for the Atom editor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibm-messaging/mq-atom-mqsc"
+  },
+  "homepage": "https://github.com/ibm-messaging/mq-atom-mqsc",
+  "license": "Apache 2.0",
+  "engines": {
+    "atom": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/ibm-messaging/mq-atom-mqsc/issues"
+  },
+  "readme": "# IBM MQ MQSC syntax highlighting support for the Atom editor.\n\nAdds syntax highlighting for IBM MQ MQSC command files to Atom.\n",
+  "readmeFilename": "README.md"
+}

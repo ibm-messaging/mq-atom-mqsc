@@ -1,0 +1,126 @@
+# (C) Copyright IBM Corporation 2016
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+'scopeName': 'source.mqsc'
+'name': 'MQSC'
+'fileTypes': [
+	'mqsc'
+]
+
+'patterns': [
+	# Comments
+	{
+		'match': '^\\*.*'
+		'name': 'comment'
+	}
+	# Escape characters
+	{
+		'match': '(\\+|-)'
+		'name': 'constant.character.escape'
+	}
+	# Strings
+	{
+		'match': '(?<=\\()\\s*\\\'.*?\\\'\\s*(?=\\))'
+		'name': 'constant.string'
+	}
+	{
+		'match': '(?<=\\()\\s*".*?"\\s*(?=\\))'
+		'name': 'constant.string'
+	}
+	{
+		'match': '(?<=\\()\\s*[^\'")].*?\\s*(?=\\))'
+		'name': 'constant.other.color'
+	}
+	# Commands
+	# ALTER variants
+	{
+		'match': '^\\s*(?i:((ALTER|ALT)\\s*(AUTHINFO|CHANNEL|CHL|COMMINFO|LISTENER|NAMELIST|NL|PROCESS|PRO|QALIAS|QA|QLOCAL|QL|QMGR|QMODEL|QM|QREMOTE|QR|SERVICE|SUB|TOPIC)))\\b'
+		'name': 'keyword'
+	}
+	# CLEAR variants
+	{
+		'match': '^\\s*(?i:(CLEAR\\s*(QLOCAL|QL|TOPICSTR)))\\b'
+		'name': 'keyword'
+	}
+	# DEFINE variants
+	{
+		'match': '^\\s*(?i:((DEFINE|DEF)\\s*(AUTHINFO|CHANNEL|CHL|COMMINFO|LISTENER|NAMELIST|NL|PROCESS|PRO|QALIAS|QA|QLOCAL|QL|QMODEL|QM|QREMOTE|QR|SERVICE|SUB|TOPIC)))\\b'
+		'name': 'keyword'
+	}
+	# DELETE variants
+	{
+		'match': '^\\s*(?i:(DELETE\\s*(AUTHINFO|AUTHREC|CHANNEL|CHL|COMMINFO|LISTENER|NAMELIST|NL|POLICY|POL|PROCESS|PRO|QALIAS|QA|QLOCAL|QL|QMODEL|QM|QREMOTE|QR|SERVICE|SUB|TOPIC)))\\b'
+		'name': 'keyword'
+	}
+	# DISPLAY variants
+	{
+		'match': '^\\s*(?i:((DISPLAY|DIS)\\s*(AUTHINFO|AUTHREC|AUTHSERV|CHANNEL|CHL|CHLAUTH|CHSTATUS|CLUSQMGR|COMMINFO|CONN|ENTAUTH|LISTENER|LSSTATUS|NAMELIST|NL|POLICY|POL|PROCESS|PRO|PUBSUB|QALIAS|QA|QCLUSTER|QC|QLOCAL|QL|QMGR|QMODEL|QM|QMSTATUS|QREMOTE|QR|QSTATUS|QS|QUEUE|Q|SBSTATUS|SERVICE|SUB|SVSTATUS|TCLUSTER|TOPIC|TPSTATUS)))\\b'
+		'name': 'keyword'
+	}
+	# EXIT variants
+	{
+		'match': '^\\s*(?i:(END|EXIT|QUIT))\\b'
+		'name': 'keyword'
+	}
+	# PING variants
+	{
+		'match': '^\\s*(?i:(PING\\s*(CHANNEL|QMGR)))\\b'
+		'name': 'keyword'
+	}
+	# PURGE variants
+	{
+		'match': '^\\s*(?i:(PURGE\\s*(CHANNEL)))\\b'
+		'name': 'keyword'
+	}
+	# REFRESH variants
+	{
+		'match': '^\\s*(?i:((REFRESH|REF)\\s*(CLUSTER|QMGR|SECURITY)))\\b'
+		'name': 'keyword'
+	}
+	# RESET variants
+	{
+		'match': '^\\s*(?i:(RESET\\s*(CLUSTER|QMGR|CHANNEL)))\\b'
+		'name': 'keyword'
+	}
+	# RESOLVE variants
+	{
+		'match': '^\\s*(?i:(RESOLVE\\s*(CHANNEL)))\\b'
+		'name': 'keyword'
+	}
+	# RESUME variants
+	{
+		'match': '^\\s*(?i:(RESUME\\s*QMGR\\s*(CLUSTER|CLUSNL)))\\b'
+		'name': 'keyword'
+	}
+	# SET variants
+	{
+		'match': '^\\s*(?i:(SET\\s*(AUTHREC|CHLAUTH|POLICY)))\\b'
+		'name': 'keyword'
+	}
+	# START variants
+	{
+		'match': '^\\s*(?i:(START\\s*(CHANNEL|CHINIT|LISTENER|SERVICE)))\\b'
+		'name': 'keyword'
+	}
+	# STOP variants
+	{
+		'match': '^\\s*(?i:(STOP\\s*(CHANNEL|CONNAUTH|LISTENER|SERVICE)))\\b'
+		'name': 'keyword'
+	}
+	# SUSPEND variants
+	{
+		'match': '^\\s*(?i:(SUSPEND\\s*QMGR\\s*(CLUSTER|CLUSNL)))\\b'
+		'name': 'keyword'
+	}
+]
